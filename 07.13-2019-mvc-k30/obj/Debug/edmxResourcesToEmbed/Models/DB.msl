@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="financeDBModelStoreContainer" CdmEntityContainer="financeDBEntities3">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="financeDBModel.Categories">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="financeDBModel.Clients">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientFullName" ColumnName="ClientFullName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OurProject">
+      <EntityTypeMapping TypeName="financeDBModel.OurProject">
+        <MappingFragment StoreEntitySet="OurProject">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OurProjectPhoto">
+      <EntityTypeMapping TypeName="financeDBModel.OurProjectPhoto">
+        <MappingFragment StoreEntitySet="OurProjectPhoto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecentNewsTB">
+      <EntityTypeMapping TypeName="financeDBModel.RecentNewsTB">
+        <MappingFragment StoreEntitySet="RecentNewsTB">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BlogImage" ColumnName="BlogImage" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="category_Id" ColumnName="category_Id" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Section2Div1">
+      <EntityTypeMapping TypeName="financeDBModel.Section2Div1">
+        <MappingFragment StoreEntitySet="Section2Div1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Section2Div2">
+      <EntityTypeMapping TypeName="financeDBModel.Section2Div2">
+        <MappingFragment StoreEntitySet="Section2Div2">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Icons" ColumnName="Icons" />
+          <ScalarProperty Name="IconsHeader" ColumnName="IconsHeader" />
+          <ScalarProperty Name="IconsDescription" ColumnName="IconsDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Section3Div1">
+      <EntityTypeMapping TypeName="financeDBModel.Section3Div1">
+        <MappingFragment StoreEntitySet="Section3Div1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Section3Div2">
+      <EntityTypeMapping TypeName="financeDBModel.Section3Div2">
+        <MappingFragment StoreEntitySet="Section3Div2">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Section4Divs">
+      <EntityTypeMapping TypeName="financeDBModel.Section4Divs">
+        <MappingFragment StoreEntitySet="Section4Divs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="TopDescription" ColumnName="TopDescription" />
+          <ScalarProperty Name="Icons" ColumnName="Icons" />
+          <ScalarProperty Name="IconHeader" ColumnName="IconHeader" />
+          <ScalarProperty Name="IconDescription" ColumnName="IconDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Section5Divs">
+      <EntityTypeMapping TypeName="financeDBModel.Section5Divs">
+        <MappingFragment StoreEntitySet="Section5Divs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="financeDBModel.Settings">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="CloseDate" ColumnName="CloseDate" />
+          <ScalarProperty Name="AdminEmail" ColumnName="AdminEmail" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+          <ScalarProperty Name="fbLink" ColumnName="fbLink" />
+          <ScalarProperty Name="instaLink" ColumnName="instaLink" />
+          <ScalarProperty Name="twitterLink" ColumnName="twitterLink" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TopSection1">
+      <EntityTypeMapping TypeName="financeDBModel.TopSection1">
+        <MappingFragment StoreEntitySet="TopSection1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="btnText" ColumnName="btnText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

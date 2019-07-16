@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="financeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="RecentNewsTB" Relationship="Self.FK_RecentNewsTB_Categories" FromRole="Categories" ToRole="RecentNewsTB" />
+    <NavigationProperty Name="RecentNewsTB1" Relationship="Self.FK_RecentNewsTB_Categories1" FromRole="Categories" ToRole="RecentNewsTB" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientFullName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" />
+  </EntityType>
+  <EntityType Name="OurProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OurProjectPhoto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Header" Type="String" MaxLength="350" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RecentNewsTB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BlogImage" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="Header" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="category_Id" Type="Int32" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="EditDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Categories" Relationship="Self.FK_RecentNewsTB_Categories" FromRole="RecentNewsTB" ToRole="Categories" />
+    <NavigationProperty Name="Categories1" Relationship="Self.FK_RecentNewsTB_Categories1" FromRole="RecentNewsTB" ToRole="Categories" />
+  </EntityType>
+  <EntityType Name="Section2Div1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Section2Div2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Icons" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IconsHeader" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IconsDescription" Type="String" MaxLength="350" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Section3Div1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="600" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Section3Div2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Section4Divs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TopDescription" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Icons" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IconHeader" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IconDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Section5Divs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Adress" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OpenDate" Type="DateTime" Precision="3" />
+    <Property Name="CloseDate" Type="DateTime" Precision="3" />
+    <Property Name="AdminEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AdminPassword" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="fbLink" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="instaLink" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="twitterLink" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TopSection1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="Header" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="btnText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_RecentNewsTB_Categories">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="RecentNewsTB" Type="Self.RecentNewsTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RecentNewsTB">
+        <PropertyRef Name="category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecentNewsTB_Categories1">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="RecentNewsTB" Type="Self.RecentNewsTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RecentNewsTB">
+        <PropertyRef Name="category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="financeDBEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Categories" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" />
+    <EntitySet Name="OurProject" EntityType="Self.OurProject" />
+    <EntitySet Name="OurProjectPhoto" EntityType="Self.OurProjectPhoto" />
+    <EntitySet Name="RecentNewsTB" EntityType="Self.RecentNewsTB" />
+    <EntitySet Name="Section2Div1" EntityType="Self.Section2Div1" />
+    <EntitySet Name="Section2Div2" EntityType="Self.Section2Div2" />
+    <EntitySet Name="Section3Div1" EntityType="Self.Section3Div1" />
+    <EntitySet Name="Section3Div2" EntityType="Self.Section3Div2" />
+    <EntitySet Name="Section4Divs" EntityType="Self.Section4Divs" />
+    <EntitySet Name="Section5Divs" EntityType="Self.Section5Divs" />
+    <EntitySet Name="Settings" EntityType="Self.Settings" />
+    <EntitySet Name="TopSection1" EntityType="Self.TopSection1" />
+    <AssociationSet Name="FK_RecentNewsTB_Categories" Association="Self.FK_RecentNewsTB_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="RecentNewsTB" EntitySet="RecentNewsTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecentNewsTB_Categories1" Association="Self.FK_RecentNewsTB_Categories1">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="RecentNewsTB" EntitySet="RecentNewsTB" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
